@@ -1,7 +1,7 @@
 class ContactMailer < ApplicationMailer
   #default from: "noreply@greenagrobiotech.com"
  
-  default to: "admin@jprbrajputagro.com"
+  default to: "jprbrajputagro@gmail.com"
 
   def new_message(message)
     @name = message.name
@@ -10,7 +10,7 @@ class ContactMailer < ApplicationMailer
     @address = message.address
     @msg = message.message
 
-    mail( :email => @email, :name => @name, :mobile_no => @mobile_no, :address => @address, :message    =>  @msg )
+    mail( :email => @email, :name => @name, :mobile_no => @mobile_no, :address => @address, :message =>  @msg )
 
   end
 
