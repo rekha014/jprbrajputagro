@@ -48,18 +48,17 @@
 								</div>
 								<div class="welcome-text">
 									<p class="first-para">
-										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy .
+										Our focus is quality, market-specific  seeds. As part of a worldwide  team, we engage in breeding, seed production, marketing, sales, trials, product development and customer support and also
+										our focus is on smart design, durability, good value, and environmental safety — products that will make your time spent in the field, garden, or greenhouse more satisfying and productive.
 									</p>
 									<p>
-										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-									</p>
-									<p>
-										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+									We store our seeds under carefully controlled conditions of low humidity and temperature, operate a quality-assurance lab on site, and closely monitor germination of all our seed lots, so that we ship you only the most viable seeds possible.
 									</p>
 									
-									<button type="submit" id="" class="btn mybtn margin-top20">
-										Learn More 
-									</button>
+									
+									<a class="btn mybtn margin-top20" href="<%= about_path%>">
+									Learn More 
+									</a>
 									
 								</div>
 							</div>
@@ -68,48 +67,12 @@
 						<div class="col-sm-5">
 							<div class="welcome-form">
 								<div class="feature-title">
-									<h2> Enquiry Form </h2>
+									<h2> Why With Us </h2>
 								</div>
 								<div class="col-sm-12 bg-white">
-									<form>
-										<div class="col-sm-6">
-											<div class="form-group frm-cntrl">
-												<i class="fa fa-user-o"></i>
-												<input type="text" class="form-control" id="usr" placeholder="Your Name">
-											</div>
-										</div>
-										
-										<div class="col-sm-6">
-											<div class="form-group frm-cntrl">
-												<i class="fa fa-envelope-o"></i>
-												<input type="text" class="form-control" id="pwd" placeholder="Email">
-											</div>
-										</div>
-										
-										<div class="col-sm-6">
-											<div class="form-group frm-cntrl">
-												<i class="fa fa-phone"></i>
-												<input type="text" class="form-control" id="pwd" placeholder="Number">
-											</div>
-										</div>
-										
-										<div class="col-sm-6">
-											<div class="form-group frm-cntrl">
-												<i class="fa fa-home"></i>
-												<input type="text" class="form-control" id=	"pwd" placeholder="Address">
-											</div>
-										</div>
-										
-										<div class="col-sm-12">
-											<div class="form-group frm-cntrl-textarea">
-												<i class="fa fa-pencil"></i><textarea class="form-control" rows="5" id="comment" placeholder="Message.."></textarea>
-											</div>
-										</div>
-										
-										<div class="col-sm-12 margin-btm10">
-											<input type="submit" value="Send" class="btn send_btn">
-										</div>
-									</form>
+									<br>
+									<p>Our mission is simple, to be not only your Seed Supplier but your Seed Partner. We are continuously endeavoring to acheive our goals : To Breed , develop and provide varities that are market specific and can be grown in different a conditions, seasons and which can meet farmers exceptaction, in terms of quality , performance and profitability.In future we want that we can fulfill the demands and requirements of our customers. So with the support of you we can reach at the top level and can get better abd best production.
+										</p>
 								</div>
 							</div>
 						</div> <!-- Col-sm-5 -->
@@ -127,20 +90,22 @@
 				<h2> Featured Products </h2>
 			</div>
 			<div class="row">
-				<div class="col-sm-12">
-					<div class="row">
 						<div class="product-section">
-							<div class="col-sm-4 margin-btm20">
+							<% @products.each do |product| %>
+							<%if product.nil? %>
+			                <p>No records </p>
+			               <% else %>
+							<div class="col-sm-4 margin-btm40">
 								<div class="product-inner">
 									<div class="single-item center">
 										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
+											<%= image_tag product.photo.url(:medium) %>
 										</figure>
 										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
+											<h2> <%= product.name %> </h2>
 											<span class="price"> 
 												<i class="fa fa-inr"></i>
-												500
+												<%= product.price %>
 											</span>
 										</div>
 										
@@ -150,201 +115,24 @@
 												<div class="top-content">
 													<ul>
 														<li> 
-															<a href="#">
+															<a href="product-inner.php">
 																<i class="fa fa-eye"></i>
 															</a>
 														</li>
 													</ul>
 												</div>
 												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  </p>
+													<p>  <%= product.description %>  
+														<a href="product-inner.php"> Read More ... </a>
+													</p>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm20">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="#">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  </p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm20">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="#">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  </p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm20">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="#">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  </p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm20">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="#">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  </p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm20">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="#">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  </p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+							<% end %>
+							<% end %>
 	<!-- Close Products Section -->
 	
 	<!-- testimonial -->
@@ -370,13 +158,14 @@
                             <div class="item active">
                                 <div class="profile-circle"><img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg" alt=""></div>
                                 <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                                    <p>We have great pleasure to present you,our first illustrated commerial website of seeds. This website contains comprehensive information about all our products. 
+									</p>
                                 </blockquote>
                             </div>
                             <div class="item">
                                 <div class="profile-circle"><img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" alt=""></div>
                                 <blockquote>
-                                    <p>Lorem sf sdfsd fipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                                    <p>Offered collections of these products are made by employing qualitative ingredients and progressive technology. These products are highly admired by the clients for their accurate composition, long shelf life, nontoxic and high purity features.We have large number of high yielding and  open pollinated and very well adopted F1 hybrids of crops.</p>
                                 </blockquote>
                             </div>
                         </div>
@@ -398,4 +187,3 @@
 		}
 			});
 	</script>
-s

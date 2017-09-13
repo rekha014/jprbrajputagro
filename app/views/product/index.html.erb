@@ -24,17 +24,21 @@
 				<div class="col-sm-12">
 					<div class="row">
 						<div class="product-section">
+							<% @products.each do |product| %>
+							<%if product.nil? %>
+			                <p>No records </p>
+			               <% else %>
 							<div class="col-sm-4 margin-btm40">
 								<div class="product-inner">
 									<div class="single-item center">
 										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
+											<%= image_tag product.photo.url(:medium) %>
 										</figure>
 										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
+											<h2> <%= product.name %> </h2>
 											<span class="price"> 
 												<i class="fa fa-inr"></i>
-												500
+												<%= product.price %>
 											</span>
 										</div>
 										
@@ -51,7 +55,7 @@
 													</ul>
 												</div>
 												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  
+													<p>  <%= product.description %>  
 														<a href="product-inner.php"> Read More ... </a>
 													</p>
 												</div>
@@ -60,302 +64,8 @@
 									</div>
 								</div>
 							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm40">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="product-inner.php">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  
-														<a href="product-inner.php"> Read More ... </a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm40">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="product-inner.php">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  
-														<a href="product-inner.php"> Read More ... </a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm40">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="product-inner.php">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  
-														<a href="product-inner.php"> Read More ... </a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm40">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="product-inner.php">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  
-														<a href="product-inner.php"> Read More ... </a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm40">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="product-inner.php">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  
-														<a href="product-inner.php"> Read More ... </a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm40">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="product-inner.php">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  
-														<a href="product-inner.php"> Read More ... </a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm40">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="product-inner.php">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  
-														<a href="product-inner.php"> Read More ... </a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
-							
-							<div class="col-sm-4 margin-btm40">
-								<div class="product-inner">
-									<div class="single-item center">
-										<figure class="image-box">
-											<img src="http://greenaura.org/adminassets/images/productimg/58e9f2aed9350.JPG">
-										</figure>
-										<div class="content">
-											<h2> Negella sativa (Kalonji) oil </h2>
-											<span class="price"> 
-												<i class="fa fa-inr"></i>
-												500
-											</span>
-										</div>
-										
-										<!-- Overlay -->
-										<div class="overlay-box">
-											<div class="inner">
-												<div class="top-content">
-													<ul>
-														<li> 
-															<a href="product-inner.php">
-																<i class="fa fa-eye"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="bottom-content">
-													<p> 35% of organic raisins 55% of oats and 10% of butter.  
-														<a href="product-inner.php"> Read More ... </a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- col-sm-4 -->
+							<% end %>
+							<% end %>
 						</div>
 					</div>
 				</div>
