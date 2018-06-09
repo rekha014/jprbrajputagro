@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Rise Agro Infra Pvt. Ltd.</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Riseagroinfra Pvt Ltd</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
+</head>
+<body>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= favicon_link_tag 'fev.ico' %>
-    	
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<%= render :partial => 'layouts/header'%>
+<%= yield %>
+<%= render :partial => 'layouts/footer'%>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<!-- bootstrap js -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"	></script>
-  </head>
-
-  <body>
-    <%#= render :partial => "layouts/header"%>
-    <%= yield %>
-    <%#= render :partial => "layouts/footer"%>
-  </body>
+</body>
 </html>

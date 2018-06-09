@@ -1,150 +1,113 @@
-<section class="page-title">
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-12">
-               <div class="page-headd-title">
-                  <h2> Contact Us </h2>
-                  <ol class="breadcrumb">
-                     <li class="breadcrumb-item"><a href="<%= root_path %>">Home</a></li>
-                     <li class="breadcrumb-item active"> Contact </li>
-                  </ol>
+<section id="contact">
+         <div class="container">
+            <div class="row text-center clearfix">
+               <div class="col-sm-8 col-sm-offset-2">
+                  <div class="contact-heading">
+                     <h2 class="title-one">Contact With Us</h2>
+                     <p>Feel free to contact us.</p>
+                  </div>
                </div>
             </div>
          </div>
-      </div>
-   </section>
-
-   <section class="feature-section contact-form">
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-6">
-               <div class="left-contact">
-                  <div class="feature-title">
-                     <h2> Our Address</h2>
+         <div class="container">
+            <div class="contact-details">
+               <!-- <div class="pattern"></div> -->
+               <div class="row text-center clearfix">
+                  <div class="col-sm-6">
+                     <div class=""><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.159543484387!2d75.87977441444616!3d22.722310633186225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd3ed13a2fcd%3A0x9e9f26ad2ee4e40!2sRise+Agro+Infra+Private+Limited!5e0!3m2!1sen!2sin!4v1476038860684" width="100%" height="395" frameborder="0" style="border:0" allowfullscreen></iframe>
+                     </div>
                   </div>
-                  <div class="cont-para">
-                     <ul> 
-                        <div class="local">
-                           <h4> Local Address </h4>
-                           <li> 
-                              <i class="fa fa-map-marker"></i>
-                              KH - 197/1/2 - Navada, Rau Mahu, Dist - Indore 453331
-                           </li>
-                        </div>
+                 <div class="col-sm-6">
+                     <div id="contact-form-section">
+                        <div class="status alert alert-success" style="display: none"></div>
+                        <%= form_for @message, :class=>"contact", url: contact_path do |message_form| %>
                         
-                        <hr>
-                        
-                        <div class="local">
-                           <h4> Corporate Office  </h4>
-                           <li> 
-                              <i class="fa fa-map-marker"></i>
-                              144 - 145 First Floor Mangal City Vijay nagar, 452010
-                           </li>
-                        </div>
-                        
-                        <hr>
-                        
-                        <li> 
-                           <i class="fa fa-phone"></i>
-                           +91 - 9977685191
-                        </li>
-                        
-                        <hr>
-                        
-                        <li> 
-                           <i class="fa fa-envelope"></i>
-                           jprbrajputagro@gmail.com
-                        </li>
-                        
-                        <hr>
-                        
-                     </ul>
+                           <div class="form-group">
+                              <%= message_form.text_field :name, :class=> "form-control", placeholder: "Enter name" %>
+                           </div>
+                           <div class="form-group">
+                              <%= message_form.text_field :mobile_no, :class=>"form-control", placeholder: "Mobile No"%>
+                           </div>
+                           <div class="form-group">
+                              <%= message_form.email_field :email, :class=>"form-control", placeholder: "Enter email"%>
+                           </div>
+                           <div class="form-group">
+                              <%= message_form.text_area :message, :class=> "form-control", :rows => "7", :cols => "40", placeholder: "Message"%>
+                           </div>
+                           <div class="form-group">
+                              <%= message_form.submit "Send", :class=> "btn btn-primary pull-right" %>
+                           </div>
+                        <% end %>
+                     </div>
                   </div>
-                  <div class="footer-social-top social-icn">
-                     <h3> Follow Us  </h3>
-                     <ul>
-                        <li>
-                           <a href="#">
-                              <i class="fa fa-facebook"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <i class="fa fa-twitter"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <i class="fa fa-instagram"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <i class="fa fa-pinterest"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <i class="fa fa-google-plus"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div> <!-- col-sm-6 -->
-            
-            <div class="col-sm-6">
-               <div class="right-contact">
-                  <p> Send Your Request and we will get in touch with you as soon as possible </p>
-                   <%= form_for @message, :class=>"contact", url: contact_path do |message_form| %>
-                     <div class="col-sm-12">
-                        <div class="form-group frm-cntrl">
-                           <i class="fa fa-user-o"></i>
-                           <%= message_form.text_field :name, :class=> "form-control", placeholder: "Enter name" %>
-                        </div>
-                     </div>
-                     
-                     <div class="col-sm-12">
-                        <div class="form-group frm-cntrl">
-                           <i class="fa fa-envelope-o"></i>
-                           <%= message_form.email_field :email, :class=>"form-control", placeholder: "Enter email"%>
-                        </div>
-                     </div>
-                     
-                     <div class="col-sm-12">
-                        <div class="form-group frm-cntrl">
-                           <i class="fa fa-phone"></i>
-                           <%= message_form.text_field :mobile_no, :class=> "form-control", placeholder: "Number" %>
-                        </div>
-                     </div>
-                     <div class="col-sm-12">
-                        <div class="form-group frm-cntrl">
-                           <i class="fa fa-home"></i>
-                           <%= message_form.text_field :address, :class=> "form-control", placeholder: "Address" %>
-                        </div>
-                     </div>
-                     
-                     <div class="col-sm-12">
-                        <div class="frm-cntrl-textarea">
-                           <i class="fa fa-pencil"></i><%= message_form.text_area :message, :class=> "form-control", :rows => "7", :cols => "40", placeholder: "Message"%>
-                        </div>
-                     </div>
-                     
-                     <div class="col-sm-12">
-                        <button type="submit" id="" class="btn mybtn margin-top10" style="background: #04683e !important;">
-                           Submit
-                        </button>
-                     </div>
-                  <% end %>
                </div>
             </div>
          </div>
-      </div>
-   </section>
+         <div class="container">
+            <div class="contact-details">
+               <!-- <div class="pattern"></div> -->
+               <div class="row text-center clearfix">
+                  <div class="col-sm-6">
+                     <div class="contact-address">
+                         <address>
+                           <h3>Head Office</h3>
+                           <p><span>Rise Agro Infra Pvt. Ltd</span></p>
+                           <strong>Address: 315, Third Floor, Princes Business Skypark, A.B. Road, Scheme No 54, Indore Madhya Pradesh 452001<br>
+                            Phone: +91 731 2511220</strong><br>
+                            Email: riseagroinfra@gmail.com<br>
 
-   <div class="container padd-60">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.3454581438887!2d75.8943230145401!3d22.75255748509046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396302aa50734b9f%3A0xc8b90510903511fb!2sMangal+city%2C+Agra+Bombay+Rd%2C+Scheme+54+PU4%2C+Indore%2C+Madhya+Pradesh+452010!5e0!3m2!1sen!2sin!4v1502716621293" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-   </div>
+                            <small>( This our Local addresss situated in madhya Pradesh )</small>
+                        </address>
+                        <div class="social-icons">
+                           <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a>
+                           <a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-dribbble"></i></a>
+                           <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="contact-address">
+                        <address>
+                           <h3>Corporate Office</h3>
+                           <p><span>Rise Agro Infra Pvt. Ltd</span></p>
+                           <strong>Address: #18, Doddaballapur Integrated Textile Park Ltd.<br>
+                           SW 51, Apparel Park, Phase II, KIADB Industrial Area, <br>
+                           Daddaballapur, Bangalore -561203 Karnataka. INDIA <br>
+                            Phone: +91 9406878037, +91 9826729600 <br>
+                            Email: riseagroinfra@gmail.com<br>
+
+                            <small>( This is our corporate Office Situated in Bangalore City. )</small>
+                        </address>
+                        <div class="social-icons">
+                           <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a>
+                           <a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-dribbble"></i></a>
+                           <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

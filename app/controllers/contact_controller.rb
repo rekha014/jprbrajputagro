@@ -20,7 +20,7 @@ def new
 private
 
   def message_params
-    params.require(:contact).permit(:name, :email, :mobile_no, :address, :message)
+    params.require(:contact).permit(:name, :email, :subject, :message)
   end
 
 
